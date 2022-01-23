@@ -9,10 +9,10 @@ public class SpeedConverter {
             System.out.println("Invalid Value");
         } else {
             String kilo = "" + kilometersPerHour;
-            if (kilometersPerHour < 10.0) kilo = "0" + kilo;
+            //if (kilometersPerHour < 10.0) kilo = "0" + kilo;
             long milesPerHour = toMilesPerHour(kilometersPerHour);
             String miles = "" + milesPerHour;
-            if (milesPerHour < 10) miles = "0" + miles;
+            //if (milesPerHour < 10) miles = "0" + miles;
             System.out.println(kilo+" km/h = "+miles+" mi/h");
         }
     }
