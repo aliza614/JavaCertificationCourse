@@ -5,8 +5,8 @@ public class MinutesToYearsDaysCalculator {
             System.out.println("Invalid Value");
         }else{
             long daysTotal=minutes/60/24;
-            long years=(long)(daysTotal/365.25);
-            long days=(long)(daysTotal%365.25);
+            long years=(daysTotal/365);
+            long days=(daysTotal%365);
             System.out.println(minutes+" min = "+years+" y and "+days+" d");
         }
     }
