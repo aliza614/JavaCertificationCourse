@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/04_01SpeedConverter/04_01SpeedConverter.iml" filepath="$PROJECT_DIR$/04_01SpeedConverter/04_01SpeedConverter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/04_02MegaBytesConverter/04_02MegaBytesConverter.iml" filepath="$PROJECT_DIR$/04_02MegaBytesConverter/04_02MegaBytesConverter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/04_03BarkingDog/04_03BarkingDog.iml" filepath="$PROJECT_DIR$/04_03BarkingDog/04_03BarkingDog.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/JavaCertificationCourse.iml" filepath="$PROJECT_DIR$/.idea/JavaCertificationCourse.iml" />
     </modules>
   </component>
