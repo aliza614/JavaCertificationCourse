@@ -2,11 +2,15 @@ public class NumberToWords {
     public static void numberToWords(int a){
         int b=reverse(a);
         String sNumber="",sDigit="";
+
         if (a<0){
             System.out.println("Invalid Value");
             return;
         }
-
+        if (a==0) {
+            System.out.println("Zero");
+            return;
+        }
         while(b>0) {
             switch (b % 10) {
                 case 0:
@@ -44,8 +48,8 @@ public class NumberToWords {
             if (sNumber=="") sNumber=sDigit;
             else sNumber=sNumber+" "+sDigit;
         }
-        if (getDigitCount(a)!=getDigitCount(b)){
-            int dif=getDigitCount(a)-getDigitCount(b);
+        if (getDigitCount(a)!=getDigitCount(reverse(a))){
+            int dif=getDigitCount(a)-getDigitCount(reverse(a));
             for (int i=0;i<dif;i++)
             {
                 if (sNumber=="") sNumber="Zero";
@@ -66,7 +70,9 @@ public class NumberToWords {
     }
     public static int getDigitCount(int a){
         int answer=0;
-        while (a>0) {
+        if (a==0) return 1;
+        if (a<0) return -1;
+        while (a!=0) {
             answer++;
             a/=10;
         }
