@@ -3,7 +3,7 @@ public class GreatestCommonDivisor {
         if(a<10||b<10) return -1;
         int maxNumber,maxCD=1;
         if (a>b) {
-            maxNumber=b
+            maxNumber=b;
         }else maxNumber=a;
         for (int i=1;i<=maxNumber;i++)
         {
