@@ -4,7 +4,7 @@ public class SumOddRange {
         return (i%2==1);
     }
     public static int sumOdd (int start, int end){
-        if (end<start) return -1;
+        if (end<start||start<=0) return -1;
         int answer=0;
         for (int i =start; i<=end; i++)
             if (isOdd(i)){
