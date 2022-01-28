@@ -22,6 +22,7 @@ public class Printer {
     }
     public int printPages(int pages){
         int pagesToPrint=duplex?pages/2+pages%2: pages;
+        pagesPrinted+=pagesToPrint;
         return pagesToPrint;
     }
 
