@@ -40,9 +40,7 @@ public class Hamburger {
         this.addition4Price = price;
     }
 
-    public double itemizeHamburger
-
-    {
+    public double itemizeHamburger() {
         return price +addition1Price+addition2Price+addition3Price+addition4Price;
 
     }
