@@ -71,18 +71,6 @@ public class Hamburger {
         this.breadRollType = breadRollType;
     }
 
-    public String getMeat() {
-        return meat;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-
-    public String getBreadRollType() {
-        return breadRollType;
-    }
-
     public void addHamburgerAddition1(String name, double price) {
         this.addition1Name = name;
         this.addition1Price = price;

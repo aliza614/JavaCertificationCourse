@@ -18,13 +18,14 @@ public class HealthyBurger extends Hamburger {
         this.healthyExtra2Price=price;
     }
     public double itemizeHamburger() {
-        System.out.println( "Healthy hamburger on a Brown rye roll with "+super.getMeat()+", price is "+super.getPrice());
+        /*System.out.println( "Healthy hamburger on a Brown rye roll with "+super.getMeat()+", price is "+super.getPrice());
         if(healthyExtra1Name!=null)
             System.out.println( "Added "+healthyExtra1Name+" for an extra "+healthyExtra1Price);
         if(healthyExtra2Name!=null)
             System.out.println( "Added "+healthyExtra2Name+" for an extra "+healthyExtra2Price);
         System.out.println( "Total Healthy Burger price is  "+super.getPrice());
-        return super.getPrice() +healthyExtra1Price+healthyExtra2Price;
+        */
+        return super.itemizeHamburger() +healthyExtra1Price+healthyExtra2Price;
 
     }
 }

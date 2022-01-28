@@ -1,6 +1,6 @@
 public class DeluxeBurger extends Hamburger{
     public DeluxeBurger() {
-        super("Deluxe", "sausage", 19.10, "white");
+        super("Deluxe", "Sausage+Bacon", 19.10, "white");
     }
 
     @Override
@@ -25,12 +25,14 @@ public class DeluxeBurger extends Hamburger{
 
 
 
-    public double itemizeHamburger() {
-        System.out.println( "Deluxe hamburger on a "+getBreadRollType()+" roll with "+super.getMeat()+", price is "+(super.getPrice()-2.75-1.81));
+    /*public double itemizeHamburger() {
+        System.out.println( "Deluxe hamburger on a white roll with sausage+bacon, price is "+(19.10-2.75-1.81));
         System.out.println( "Added Chips for an extra 2.75\n" +
                 "    Added Drink for an extra 1.81");
 
-        System.out.println( "Total Deluxe Burger price is  "+super.getPrice());
-        return super.getPrice();
+        System.out.println( "Total Deluxe Burger price is  "+19.10);
+        return 19.10;
     }
+     */
+
 }
