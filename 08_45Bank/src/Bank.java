@@ -73,13 +73,14 @@ public boolean listCustomers(String branchName, boolean printTransactions){
                     ArrayList<Double> transactions=branchCustomer.getTransactions();
                     for (int j=0;j<transactions.size();j++){
                         Double transaction=transactions.get(j);
-                        System.out.println("["+(j+1)+"] Amount "+transaction);
+                        System.out.println("["+(j+1)+"]  Amount "+transaction);
                     }
-                    return true;
+                    //return true;
 
                 }
-                else return false;
+                //else return false;
             }
+            return true;
         }
         return false;
 }

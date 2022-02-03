@@ -71,10 +71,17 @@ public class MobilePhone {
             3. Tom -> 11235813
             4. Jane -> 23571113
 */
-    public void printContacts() {
+    /*OLD public void printContacts() {
         for (int i = 0; i < myContacts.size(); i++) {
             Contact contact = myContacts.get(i);
             System.out.println(i+1 + ". " + contact.getName() + " -> " + contact.getPhoneNumber());
+        }
+    }*/
+    public void printContacts() {
+        System.out.println("Contact List:");
+        for (int i = 0; i < myContacts.size(); i++) {
+            Contact contact = myContacts.get(i);
+            System.out.println((i+1) + ". " + contact.getName() + " -> " + contact.getPhoneNumber());
         }
     }
 

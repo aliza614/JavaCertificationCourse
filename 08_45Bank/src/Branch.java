@@ -43,7 +43,7 @@ public boolean addCustomerTransaction(String customerName, double transaction){
 }
 //        -  findCustomer(), has one parameter of type String (name of customer) and returns a Customer. Return the Customer if they exist, null otherwise.
 
-public Customer findCustomer(String customerName){
+private Customer findCustomer(String customerName){
     for (int i = 0; i < customers.size(); i++) {
         Customer customer=customers.get(i);
         if (customer.getName().equals(customerName))
