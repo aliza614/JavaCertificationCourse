@@ -70,18 +70,22 @@ class MyConsumer implements Runnable{
             bufferLock.lock();
             //synchronized (buffer){
                 if(buffer.isEmpty()){
+                    bufferLock.unlock();
                     continue;
                 }
                 if(buffer.get(0).equals("EOF"))
                 {
                     System.out.println(color+"Exiting");
+                    bufferLock.unlock();
                     break;
                 }else{
 
                     System.out.println(color+"Removed"+buffer.remove(0));
                 }
             //}
-            bufferLock.unlock();
+            //problem here because you skip the unlock with continue but it's still being held.
+            // so eventually exceed the maximum locks you can have
+            //this was a problem here-->bufferLock.unlock();
 
         }
     }
