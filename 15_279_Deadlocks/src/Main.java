@@ -30,15 +30,17 @@ public class Main {
     private static class Thread2 extends Thread {
         @Override
         public void run() {
-            synchronized (Main.lock2) {
-                System.out.println("Thread 2: has lock 2");
+            //this is going to flip it so that the locks are in the same order as Thread1
+            // this avoids deadlock
+            synchronized (Main.lock1) {
+                System.out.println("Thread 2: has lock 1");
                 try {
                     Thread.sleep(100);
                 } catch (InterruptedException e) {
 
                 }
-                System.out.println("Thread 2: waiting for lock1");
-                synchronized (Main.lock1) {
+                System.out.println("Thread 2: waiting for lock2");
+                synchronized (Main.lock2) {
                     System.out.println("Thread 2: has lock2 and lock1");
                 }
                 System.out.println("Thread 2: released lock 1");
