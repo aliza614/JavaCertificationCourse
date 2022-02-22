@@ -37,8 +37,11 @@ class MyProducer implements Runnable{
                 System.out.println(color+"Adding..."+num);
                 //synchronized (buffer){
                 bufferlock.lock();
-                    buffer.add(num);
-                bufferlock.unlock();
+                    try{
+                        buffer.add(num);
+                    } finally{
+                        bufferlock.unlock();
+                    }
                 //}
                 Thread.sleep(random.nextInt(1000));
             }catch(InterruptedException e)
@@ -49,8 +52,12 @@ class MyProducer implements Runnable{
         System.out.println(color+"Adding EOP and exiting...");
         //synchronized (buffer){
         bufferlock.lock();
-             buffer.add("EOF");
-         bufferlock.unlock();
+            try{
+                buffer.add("EOF");
+            }
+         finally{
+                bufferlock.unlock();
+            }
          //}
     }
 }
@@ -69,6 +76,7 @@ class MyConsumer implements Runnable{
         while (true){
             bufferLock.lock();
             //synchronized (buffer){
+            try{
                 if(buffer.isEmpty()){
                     bufferLock.unlock();
                     continue;
