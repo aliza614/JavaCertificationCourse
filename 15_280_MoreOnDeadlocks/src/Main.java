@@ -1,10 +1,21 @@
 public class Main {
     public static void main(String[] args) {
-        PolitePerson jane=new PolitePerson("Jane");
-        PolitePerson john=new PolitePerson("John");
+        final PolitePerson jane=new PolitePerson("Jane");
+        final PolitePerson john=new PolitePerson("John");
+        //they are now working on separate threads and will probably deadlock
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                jane.sayHello(john);
+            }
+        }).start();
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                john.sayHello(jane);
+            }
+        }).start();
 
-        jane.sayHello(john);
-        john.sayHello(jane);
     }
     static class PolitePerson{
         private final String name;
