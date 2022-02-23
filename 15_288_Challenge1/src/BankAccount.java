@@ -25,6 +25,7 @@ public class BankAccount {
         }
         */
         /*THIS IS THE FOURTH SOLUTION*/
+        //status is threadsafe because it's a local variable
         boolean status=false;
          try{
             if (lock.tryLock(1000, TimeUnit.MILLISECONDS)){
@@ -57,6 +58,7 @@ public class BankAccount {
 
          */
         /*THIS IS THE FOURTH SOLUTION*/
+        //status is threadsafe because it's a local variable
         boolean status=false;
         try{
             if(lock.tryLock(1000,TimeUnit.MILLISECONDS)){
