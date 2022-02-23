@@ -16,4 +16,12 @@ public class BankAccount {
             balance-=amount;
         }
     }
+
+    public/*don't have to synchronize because it's not making changes*/ String getAccountNumber() {
+        return accountNumber;
+    }
+
+    public/*don't have to synchronize because it's not making changes*/ void printAccountNumber(){
+        System.out.println("Account number = "+accountNumber);
+    }
 }
