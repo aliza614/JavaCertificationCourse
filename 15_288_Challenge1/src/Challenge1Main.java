@@ -35,7 +35,7 @@ public class Challenge1Main {
                 account.deposit(203.75);
                 account.withdraw(100.00);
             }
-        }
+        });
 //        THIS IS PART OF BOTH SOLUTIONS
                 thread1.start();
         thread2.start();
