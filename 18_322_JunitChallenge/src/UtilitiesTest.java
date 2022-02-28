@@ -16,7 +16,11 @@ class UtilitiesTest {
 
     @Test
     void everyNthChar() {
-        fail("this is a dummy test");
+//        fail("this is a dummy test");
+        Utilities util=new Utilities();
+        char[] result={'e','l'};
+        char[] input={'h','e','l','l','o'};
+        assertArrayEquals(result,util.everyNthChar(input,2));
     }
 
     @Test

@@ -8,7 +8,7 @@ public class Utilities {
         char[] result=new char[returnedLength];
         int index=0;
 
-        for (int i = n-1; i < sourceArray.length ; i++) {
+        for (int i = n-1; i < sourceArray.length ; i+=n) {
             result[index++]=sourceArray[i];
 
         }
