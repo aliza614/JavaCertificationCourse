@@ -26,6 +26,8 @@ public class Utilities {
             else
                 sb.append(string[i]);
         }
+        if(string[string.length-1]!=string[string.length-2])
+            sb.append(string[string.length-1]);
         return sb.toString();
     }
     public int converter(int a, int b){

@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class UtilitiesTest {
-
+    private Utilities util=new Utilities();
     @BeforeEach
     void setUp() {
     }
@@ -21,7 +21,8 @@ class UtilitiesTest {
 
     @Test
     void removePairs() {
-        fail("this is a dummy test");
+//        fail("this is a dummy test");
+        assertEquals("ABCDEF", util.removePairs("AABCDDEFF"));
     }
 
     @Test
