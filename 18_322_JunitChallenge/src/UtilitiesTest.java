@@ -23,6 +23,10 @@ class UtilitiesTest {
     void removePairs() {
 //        fail("this is a dummy test");
         assertEquals("ABCDEF", util.removePairs("AABCDDEFF"));
+        assertEquals("ABCABDEF",util.removePairs("ABCCABDEEF"));
+        assertNull(util.removePairs(null),"not unull result");
+        assertEquals("A",util.removePairs("A"));
+        assertEquals("",util.removePairs(""));
     }
 
     @Test

@@ -17,7 +17,7 @@ public class Utilities {
     //"ABBCDEEF"->"ABCDEF"
     //"ABCBDEEF"->"ABCBDEF" the 2 bs aren't next to eachother so aren't removed
     public String removePairs(String source){
-        if (source.length()<2) return source;
+        if (source==null || source.length()<2) return source;
         StringBuilder sb=new StringBuilder();
         char[] string=source.toCharArray();
         for (int i = 0; i < string.length-1; i++) {
