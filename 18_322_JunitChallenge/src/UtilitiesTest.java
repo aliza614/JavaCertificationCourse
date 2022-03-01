@@ -35,11 +35,15 @@ class UtilitiesTest {
 
     @Test
     void converter() {
-        fail("this is a dummy test");
+//        fail("this is a dummy test");
+        assertEquals(300,util.converter(10,5),0);
     }
 
     @Test
     void nullIfOddLength() {
-        fail("this is a dummy test");
+//        fail("this is a dummy test");
+        Utilities util=new Utilities();
+        assertNull(util.nullIfOddLength("odd"));
+        assertNotNull(util.nullIfOddLength("even"));
     }
 }
