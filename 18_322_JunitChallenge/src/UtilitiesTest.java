@@ -1,4 +1,4 @@
-import org.graalvm.compiler.core.common.util.Util;
+
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -37,8 +37,13 @@ class UtilitiesTest {
     @Test
     void converter() {
 //        fail("this is a dummy test");
-        Utilities util=new Utilities();
+        Exception exception=assertThrows(ArithmeticException.class,()-> {
+            assertEquals(300,util.converter(10,0),0);
+        });
         assertEquals(300,util.converter(10,5),0);
+        assertTrue(exception.getClass().equals(ArithmeticException.class));
+
+
     }
 
     @Test
