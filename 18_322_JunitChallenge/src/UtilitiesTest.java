@@ -37,15 +37,21 @@ class UtilitiesTest {
     @Test
     void converter() {
 //        fail("this is a dummy test");
+
+        assertEquals(300,util.converter(10,5),0);
+
+
+    }
+    @Test
+    void converter_aritmetic_exception() {
+//        fail("this is a dummy test");
         Exception exception=assertThrows(ArithmeticException.class,()-> {
             assertEquals(300,util.converter(10,0),0);
         });
-        assertEquals(300,util.converter(10,5),0);
         assertTrue(exception.getClass().equals(ArithmeticException.class));
 
 
     }
-
     @Test
     void nullIfOddLength() {
 //        fail("this is a dummy test");
